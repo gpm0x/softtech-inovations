@@ -5,78 +5,48 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* Design system com fundo azul escuro e texto branco */
+/* Design system com fundo azul escuro e texto visível */
 
 @layer base {
   :root {
     --background: 215 28% 7%; /* #0b1320 */
-    --foreground: 0 0% 100%; /* branco */
+    --foreground: 210 10% 85%; /* cinza claro visível */
 
     --card: 215 28% 7%;
-    --card-foreground: 0 0% 100%;
+    --card-foreground: 210 10% 85%;
 
     --popover: 215 28% 7%;
-    --popover-foreground: 0 0% 100%;
+    --popover-foreground: 210 10% 85%;
 
-    --primary: 0 0% 100%; /* branco para CTAs */
+    --primary: 210 90% 70%; /* azul claro para CTAs */
     --primary-foreground: 215 28% 7%; /* azul escuro para texto nos botões */
 
     --secondary: 217 19% 15%; /* azul mais claro para cards */
-    --secondary-foreground: 0 0% 100%;
+    --secondary-foreground: 210 10% 85%;
 
     --muted: 217 19% 15%;
-    --muted-foreground: 210 10% 85%;
+    --muted-foreground: 210 10% 70%;
 
     --accent: 217 19% 15%;
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 210 10% 85%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 217 19% 20%;
     --input: 217 19% 20%;
-    --ring: 0 0% 100%;
+    --ring: 210 90% 70%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 215 28% 7%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 0 0% 100%;
+    --sidebar-foreground: 210 10% 85%;
+    --sidebar-primary: 210 90% 70%;
     --sidebar-primary-foreground: 215 28% 7%;
     --sidebar-accent: 217 19% 15%;
-    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-accent-foreground: 210 10% 85%;
     --sidebar-border: 217 19% 20%;
-    --sidebar-ring: 0 0% 100%;
-  }
-
-  .dark {
-    --background: 215 28% 7%;
-    --foreground: 0 0% 100%;
-    --card: 215 28% 7%;
-    --card-foreground: 0 0% 100%;
-    --popover: 215 28% 7%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 0 0% 100%;
-    --primary-foreground: 215 28% 7%;
-    --secondary: 217 19% 15%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 217 19% 15%;
-    --muted-foreground: 210 10% 85%;
-    --accent: 217 19% 15%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 217 19% 20%;
-    --input: 217 19% 20%;
-    --ring: 0 0% 100%;
-    --sidebar-background: 215 28% 7%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 0 0% 100%;
-    --sidebar-primary-foreground: 215 28% 7%;
-    --sidebar-accent: 217 19% 15%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 217 19% 20%;
-    --sidebar-ring: 0 0% 100%;
+    --sidebar-ring: 210 90% 70%;
   }
 }
 
@@ -89,32 +59,32 @@
     @apply bg-background text-foreground font-inter;
     font-family: 'Inter', sans-serif;
     background-color: #0b1320;
-    color: #ffffff;
+    color: #d1d5db; /* cinza claro */
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply text-foreground;
-    color: #ffffff;
+    color: #f9fafb; /* branco suave */
   }
 
   p, span, div {
     @apply text-foreground;
-    color: #ffffff;
+    color: #d1d5db; /* cinza claro */
   }
 }
 
 /* Utilitários personalizados */
 @layer utilities {
   .text-primary-blue {
-    color: #3b82f6;
+    color: #60a5fa;
   }
   
   .bg-primary-blue {
-    background-color: #3b82f6;
+    background-color: #60a5fa;
   }
   
   .border-primary-blue {
-    border-color: #3b82f6;
+    border-color: #60a5fa;
   }
 
   .bg-dark-blue {
@@ -123,5 +93,17 @@
 
   .font-inter {
     font-family: 'Inter', sans-serif;
+  }
+
+  .text-white-soft {
+    color: #f9fafb;
+  }
+
+  .text-gray-light {
+    color: #d1d5db;
+  }
+
+  .text-blue-light {
+    color: #60a5fa;
   }
 }
