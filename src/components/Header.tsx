@@ -18,11 +18,11 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-gray-200 z-50 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 bg-dark-blue/95 backdrop-blur-lg border-b border-white/10 z-50">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-blue-900">
-            SoftTech <span className="text-blue-600">Inovations</span>
+          <Link to="/" className="text-2xl font-bold text-white">
+            SoftTech <span className="text-blue-300">Inovations</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -33,13 +33,13 @@ const Header = () => {
                 to={item.path}
                 className={`relative font-medium transition-colors duration-200 ${
                   isActive(item.path) 
-                    ? "text-blue-600" 
-                    : "text-gray-700 hover:text-blue-600"
+                    ? "text-blue-300" 
+                    : "text-white hover:text-blue-300"
                 }`}
               >
                 {item.name}
                 {isActive(item.path) && (
-                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600 rounded-full"></div>
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-300 rounded-full"></div>
                 )}
               </Link>
             ))}
@@ -51,7 +51,7 @@ const Header = () => {
               href="https://wa.me/5511954802686"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:scale-105"
+              className="bg-white text-dark-blue px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:bg-blue-50 hover:scale-105"
             >
               💬 Fale Conosco
             </a>
@@ -62,21 +62,21 @@ const Header = () => {
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={24} className="text-blue-900" /> : <Menu size={24} className="text-blue-900" />}
+            {isMenuOpen ? <X size={24} className="text-white" /> : <Menu size={24} className="text-white" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-6 pb-6 border-t border-gray-200 pt-6">
+          <nav className="md:hidden mt-6 pb-6 border-t border-white/10 pt-6">
             {menuItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 className={`block py-3 font-medium transition-colors duration-200 ${
                   isActive(item.path) 
-                    ? "text-blue-600" 
-                    : "text-gray-700 hover:text-blue-600"
+                    ? "text-blue-300" 
+                    : "text-white hover:text-blue-300"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -87,7 +87,7 @@ const Header = () => {
               href="https://wa.me/5511954802686"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-colors duration-200 text-center mt-4"
+              className="block bg-white text-dark-blue px-6 py-3 rounded-xl font-semibold transition-colors duration-200 text-center mt-4"
               onClick={() => setIsMenuOpen(false)}
             >
               💬 Fale Conosco

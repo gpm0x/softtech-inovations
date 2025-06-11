@@ -28,18 +28,24 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-800 via-blue-900 to-blue-800 text-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"}}></div>
+    <section className="py-24 bg-dark-blue relative overflow-hidden">
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: "radial-gradient(circle at 50% 50%, #3b82f6 0%, transparent 70%)",
+          backgroundSize: "600px 600px",
+          backgroundPosition: "center"
+        }}></div>
+      </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <span className="inline-block bg-blue-600 text-blue-100 px-4 py-2 rounded-full text-sm font-medium mb-4">
+        <div className="text-center mb-20">
+          <span className="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20">
             Nossos Diferenciais
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Qualidade & Excelência
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Garantias que fazem toda a diferença no seu projeto
           </p>
         </div>
@@ -48,14 +54,14 @@ const StatsSection = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-8 rounded-2xl bg-blue-700/50 backdrop-blur-sm hover:bg-blue-600/50 transition-all duration-300 hover:-translate-y-2 border border-blue-600/30"
+              className="text-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 border border-white/10"
             >
               <div className="text-5xl mb-6">{stat.icon}</div>
-              <div className="text-3xl font-bold text-blue-200 mb-3">
+              <div className="text-3xl font-bold text-blue-300 mb-3">
                 {stat.number}
               </div>
-              <h3 className="text-xl font-bold mb-3">{stat.label}</h3>
-              <p className="text-blue-100">{stat.description}</p>
+              <h3 className="text-xl font-bold mb-3 text-white">{stat.label}</h3>
+              <p className="text-gray-300">{stat.description}</p>
             </div>
           ))}
         </div>
