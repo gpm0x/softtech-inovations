@@ -18,11 +18,11 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-[#0b1320] text-white z-50 shadow-lg">
+    <header className="fixed top-0 left-0 right-0 bg-blue-900 text-white z-50 shadow-lg">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold">
-            SoftTech <span className="text-blue-400">Inovations</span>
+            SoftTech <span className="text-blue-300">Inovations</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -31,24 +31,14 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`hover:text-blue-400 transition-colors duration-200 ${
-                  isActive(item.path) ? "text-blue-400" : ""
+                className={`hover:text-blue-300 transition-colors duration-200 ${
+                  isActive(item.path) ? "text-blue-300" : ""
                 }`}
               >
                 {item.name}
               </Link>
             ))}
           </nav>
-
-          {/* WhatsApp CTA Button */}
-          <a
-            href="https://wa.me/5511954802686"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200"
-          >
-            WhatsApp
-          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -66,22 +56,14 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`block py-2 hover:text-blue-400 transition-colors duration-200 ${
-                  isActive(item.path) ? "text-blue-400" : ""
+                className={`block py-2 hover:text-blue-300 transition-colors duration-200 ${
+                  isActive(item.path) ? "text-blue-300" : ""
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <a
-              href="https://wa.me/5511954802686"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-4 bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors duration-200"
-            >
-              WhatsApp
-            </a>
           </nav>
         )}
       </div>
