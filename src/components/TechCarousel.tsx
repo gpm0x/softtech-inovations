@@ -145,8 +145,8 @@ const TechCarousel = () => {
           </p>
         </div>
 
-        {/* Tech Categories */}
-        <div className="space-y-12">
+        {/* Desktop view - show by categories */}
+        <div className="hidden md:block space-y-12">
           {techCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="text-center">
               <h3 className="text-2xl font-bold text-blue-light mb-8">{category.category}</h3>
@@ -168,7 +168,7 @@ const TechCarousel = () => {
         </div>
 
         {/* Mobile Carousel for all techs */}
-        <div className="md:hidden mt-12">
+        <div className="md:hidden">
           <div className="overflow-hidden rounded-2xl">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
