@@ -1,9 +1,14 @@
 
 import { useEffect, useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const TechCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   const techCategories = [
     {
       category: "Frontend",
@@ -118,18 +123,6 @@ const TechCarousel = () => {
     }
   ];
 
-  const allTechnologies = techCategories.flatMap(category => category.technologies);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === allTechnologies.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [allTechnologies.length]);
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
       <div className="container mx-auto px-6">
@@ -145,60 +138,41 @@ const TechCarousel = () => {
           </p>
         </div>
 
-        {/* Desktop view - show by categories */}
-        <div className="hidden md:block space-y-12">
-          {techCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="text-center">
-              <h3 className="text-2xl font-bold text-blue-light mb-8">{category.category}</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                {category.technologies.map((tech, index) => (
-                  <div
-                    key={tech.name}
-                    className="group bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-slate-600/50 transition-all duration-300 hover:-translate-y-2 border border-slate-600/50"
-                  >
-                    <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {tech.icon}
+        {/* Carousel para as categorias */}
+        <div className="max-w-6xl mx-auto">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {techCategories.map((category, categoryIndex) => (
+                <CarouselItem key={categoryIndex}>
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-blue-light mb-8">{category.category}</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                      {category.technologies.map((tech, index) => (
+                        <div
+                          key={tech.name}
+                          className="group bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-slate-600/50 transition-all duration-300 hover:-translate-y-2 border border-slate-600/50"
+                        >
+                          <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            {tech.icon}
+                          </div>
+                          <h4 className="text-lg font-bold text-white-soft group-hover:text-blue-light transition-colors">{tech.name}</h4>
+                        </div>
+                      ))}
                     </div>
-                    <h4 className="text-lg font-bold text-white-soft group-hover:text-blue-light transition-colors">{tech.name}</h4>
                   </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Mobile Carousel for all techs */}
-        <div className="md:hidden">
-          <div className="overflow-hidden rounded-2xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {allTechnologies.map((tech, index) => (
-                <div
-                  key={`${tech.name}-${index}`}
-                  className="flex-shrink-0 w-full px-4"
-                >
-                  <div className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-8 text-center border border-slate-600/50">
-                    <div className="flex justify-center mb-4">
-                      {tech.icon}
-                    </div>
-                    <h3 className="text-lg font-bold text-white-soft">{tech.name}</h3>
-                  </div>
-                </div>
+                </CarouselItem>
               ))}
-            </div>
-          </div>
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
 
-          {/* Indicators */}
-          <div className="flex justify-center mt-6 space-x-2">
-            {allTechnologies.map((_, index) => (
-              <button
+          {/* Indicadores para mobile */}
+          <div className="flex justify-center mt-8 space-x-2 md:hidden">
+            {techCategories.map((_, index) => (
+              <div
                 key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? "bg-blue-400 scale-125" : "bg-slate-600 hover:bg-slate-500"
-                }`}
-                onClick={() => setCurrentIndex(index)}
+                className="w-2 h-2 rounded-full bg-slate-600"
               />
             ))}
           </div>

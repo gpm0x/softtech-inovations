@@ -13,7 +13,7 @@ const PortfolioFinalCTA = () => {
           href="https://wa.me/5511954802686"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 inline-block"
+          className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block"
         >
           💬 Solicitar Orçamento Agora
         </a>
