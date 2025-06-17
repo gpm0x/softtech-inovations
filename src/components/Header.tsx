@@ -18,7 +18,7 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-dark-blue/95 backdrop-blur-lg border-b border-white/10 z-50">
+    <header className="fixed top-0 left-0 right-0 bg-slate-900/95 backdrop-blur-lg border-b border-white/10 z-50">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-white">
@@ -51,7 +51,7 @@ const Header = () => {
               href="https://wa.me/5511954802686"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-dark-blue px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:bg-blue-50 hover:scale-105"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 hover:scale-105"
             >
               💬 Fale Conosco
             </a>
@@ -87,7 +87,7 @@ const Header = () => {
               href="https://wa.me/5511954802686"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-white text-dark-blue px-6 py-3 rounded-xl font-semibold transition-colors duration-200 text-center mt-4"
+              className="block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-colors duration-200 text-center mt-4"
               onClick={() => setIsMenuOpen(false)}
             >
               💬 Fale Conosco

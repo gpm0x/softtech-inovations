@@ -356,7 +356,7 @@ const Contact = () => {
               href="https://wa.me/5511954802686"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105"
+              className="group inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105"
             >
               💬 WhatsApp: (11) 95480-2686
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
