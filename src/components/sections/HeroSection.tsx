@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -33,7 +32,7 @@ const HeroSection = () => {
                 Criamos sites, landing pages, e-commerce e micro-SaaS que realmente convertem e geram resultados excepcionais para empresas visionárias.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center animate-slide-up" style={{animationDelay: '0.4s'}}>
+              <div className="flex justify-center lg:justify-start animate-slide-up" style={{animationDelay: '0.4s'}}>
                 <a
                   href="https://wa.me/5511954802686"
                   target="_blank"
@@ -43,10 +42,6 @@ const HeroSection = () => {
                   💬 Solicitar Orçamento Grátis
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
-                <button className="group btn-secondary flex items-center gap-3">
-                  <Calendar className="w-5 h-5" />
-                  Agendar Reunião
-                </button>
               </div>
             </div>
 
