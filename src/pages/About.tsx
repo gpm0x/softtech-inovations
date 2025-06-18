@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StatsSection from "@/components/StatsSection";
@@ -62,10 +61,7 @@ const About = () => {
   ];
 
   const timeline = [
-    { year: "2021", title: "Fundação", desc: "SoftTech Inovations é criada com foco em soluções digitais" },
-    { year: "2022", title: "Crescimento", desc: "Primeiros 25 projetos entregues e equipe expandida" },
-    { year: "2023", title: "Expansão", desc: "Atingimos 50+ clientes e diversificamos serviços" },
-    { year: "2024", title: "Consolidação", desc: "75+ projetos entregues e reconhecimento no mercado" }
+    { year: "2024", title: "Fundação", desc: "SoftTech Inovations é criada com foco em soluções digitais" }
   ];
 
   return (
@@ -101,11 +97,11 @@ const About = () => {
                 
                 <div className="prose prose-lg max-w-none text-gray-light space-y-6">
                   <p className="text-lg leading-relaxed">
-                    A <strong className="text-blue-light">SoftTech Inovations</strong> nasceu da paixão por tecnologia e do desejo de transformar ideias em realidade digital. Fundada em 2021, começamos com um propósito claro: democratizar o acesso a soluções digitais de qualidade para empresas de todos os tamanhos.
+                    A <strong className="text-blue-light">SoftTech Inovations</strong> nasceu da paixão por tecnologia e do desejo de transformar ideias em realidade digital. Fundada em 2024, começamos com um propósito claro: democratizar o acesso a soluções digitais de qualidade para empresas de todos os tamanhos.
                   </p>
                   
                   <p className="text-lg leading-relaxed">
-                    Ao longo dos anos, desenvolvemos mais de <strong className="text-blue-light">75 projetos</strong> para <strong className="text-blue-light">58 clientes</strong> diferentes, sempre mantendo nosso compromisso com a excelência e inovação. Cada projeto é uma oportunidade de aprender, crescer e superar expectativas.
+                    Somos uma empresa jovem e inovadora, focada em desenvolver projetos únicos que atendam perfeitamente às necessidades dos nossos clientes. Cada projeto é uma oportunidade de aprender, crescer e superar expectativas.
                   </p>
                   
                   <p className="text-lg leading-relaxed">
@@ -138,25 +134,18 @@ const About = () => {
               Nossa Evolução
             </h2>
             <p className="text-xl text-gray-light">
-              Cada ano marca uma conquista importante em nossa jornada
+              O início de uma jornada promissora no mundo da tecnologia
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-500"></div>
-              {timeline.map((item, index) => (
-                <div key={index} className={`flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
-                    <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
-                      <div className="text-2xl font-bold text-blue-light mb-2">{item.year}</div>
-                      <h3 className="text-xl font-semibold text-white-soft mb-2">{item.title}</h3>
-                      <p className="text-gray-light">{item.desc}</p>
-                    </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-dark-blue"></div>
-                </div>
-              ))}
+            <div className="flex justify-center">
+              <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 text-center max-w-md">
+                <div className="w-4 h-4 bg-blue-500 rounded-full mx-auto mb-6"></div>
+                <div className="text-3xl font-bold text-blue-light mb-3">{timeline[0].year}</div>
+                <h3 className="text-2xl font-semibold text-white-soft mb-4">{timeline[0].title}</h3>
+                <p className="text-gray-light text-lg">{timeline[0].desc}</p>
+              </div>
             </div>
           </div>
         </div>
