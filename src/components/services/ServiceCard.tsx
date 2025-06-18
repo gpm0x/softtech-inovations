@@ -60,7 +60,7 @@ const ServiceCard = ({ title, icon, description, benefits, technologies, price, 
           href="https://wa.me/5511954802686"
           target="_blank"
           rel="noopener noreferrer"
-          className="group inline-flex items-center gap-3 bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
+          className="group inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
         >
           💬 Solicitar Orçamento
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -86,7 +86,7 @@ const ServiceCard = ({ title, icon, description, benefits, technologies, price, 
                 href="https://wa.me/5511954802686"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 bg-white text-dark-blue px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+                className="group inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 Falar Conosco
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

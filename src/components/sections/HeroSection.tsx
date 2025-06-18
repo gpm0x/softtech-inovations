@@ -48,21 +48,6 @@ const HeroSection = () => {
                   Agendar Reunião
                 </button>
               </div>
-              
-              <div className="mt-12 grid grid-cols-3 gap-8 animate-slide-up" style={{animationDelay: '0.6s'}}>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">+3</div>
-                  <div className="text-sm text-slate-400">Anos de Mercado</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">+58</div>
-                  <div className="text-sm text-slate-400">Clientes</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">+75</div>
-                  <div className="text-sm text-slate-400">Projetos</div>
-                </div>
-              </div>
             </div>
 
             <div className="relative animate-slide-right">
