@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Instagram, MessageCircle } from "lucide-react";
+import { Instagram, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -30,8 +30,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-green-600 hover:bg-green-500 rounded-full flex items-center justify-center transition-colors duration-200 text-white"
+                title="WhatsApp"
               >
-                <MessageCircle size={20} />
+                <span className="text-sm">💬</span>
               </a>
             </div>
           </div>
@@ -77,8 +78,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-300 hover:text-white transition-colors duration-200"
+                title="WhatsApp"
               >
-                <MessageCircle className="w-5 h-5 mr-3" />
+                <span className="text-lg mr-3">💬</span>
                 (11) 95480-2686
               </a>
               <p className="text-gray-300 text-sm leading-relaxed">
