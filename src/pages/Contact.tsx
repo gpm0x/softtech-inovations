@@ -29,15 +29,40 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simular envio do formulário
-    setTimeout(() => {
-      toast({
-        title: "Mensagem enviada com sucesso!",
-        description: "Entraremos em contato em breve. Obrigado!",
+    try {
+      const response = await fetch('/api/functions/v1/send-contact-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-      setFormData({ name: "", email: "", phone: "", company: "", service: "", message: "" });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Mensagem enviada com sucesso!",
+          description: "Entraremos em contato em breve. Obrigado!",
+        });
+        setFormData({ name: "", email: "", phone: "", company: "", service: "", message: "" });
+      } else {
+        toast({
+          title: "Erro ao enviar mensagem",
+          description: "Tente novamente ou entre em contato pelo WhatsApp.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error('Erro ao enviar formulário:', error);
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Tente novamente ou entre em contato pelo WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const contactInfo = [
